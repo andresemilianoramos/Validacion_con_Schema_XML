@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<registroTemp xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation ="registro_temp.xsd">
+    <provincia></provincia>
+    <fechaRegistro></fechaRegistro>
+    <tempMin></tempMin>
+    <tempMax></tempMax>
+    <numeroIncidencias>
+        <nombreIncidencia></nombreIncidencia>
+    </numeroIncidencias>
+    <severidadIncidencia></severidadIncidencia>
+</registroTemp>

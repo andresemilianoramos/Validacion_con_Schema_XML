@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="agenda" type="agendaType"/>
-  <xs:complexType name="situacionType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="estudiante"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="nombre_completoType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="nombre"/>
-      <xs:element type="xs:string" name="apellido1"/>
-      <xs:element type="xs:string" name="apellido2"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="agendaType">
-    <xs:sequence>
-      <xs:element type="situacionType" name="situacion"/>
-      <xs:element type="nombre_completoType" name="nombre_completo"/>
-      <xs:element type="xs:string" name="apodo"/>
-      <xs:element type="xs:string" name="mail"/>
-    </xs:sequence>
-  </xs:complexType>
+    <xs:element name="agenda" type="agendaType"/>
+
+    <xs:complexType name="situacionType">
+        <xs:choice>
+            <xs:element name="trabajador" type="xs:string"/>
+            <xs:element name="estudiante" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="nombre_completoType" >
+        <xs:sequence>
+            <xs:element type="xs:string" name="nombre" maxOccurs="unbounded"/>
+            <xs:element type="xs:string" name="apellido1"/>
+            <xs:element type="xs:string" name="apellido2"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="agendaType">
+        <xs:sequence>
+            <xs:element type="situacionType" name="situacion" maxOccurs="1" minOccurs="0"/>
+            <xs:element type="nombre_completoType" name="nombre_completo"/>
+            <xs:element type="xs:string" name="apodo" minOccurs="0"/>
+            <xs:element type="xs:string" name="mail" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

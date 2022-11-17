@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE agenda [
-<!ELEMENT agenda (situacion?, nombre_completo, apodo*, mail?)>
+        <!ELEMENT agenda (situacion?, nombre_completo, apodo*, mail?)>
         <!ELEMENT situacion (estudiante|trabajador)>
         <!ELEMENT estudiante (#PCDATA)>
         <!ELEMENT trabajador (#PCDATA)>
@@ -21,5 +21,5 @@
                 <apellido2>Gimenez</apellido2>
         </nombre_completo>
         <apodo>Andrus</apodo>
-        <mail>andresemiliano1@gmail.com</mail>
+        <mail>andre</mail>
 </agenda>
