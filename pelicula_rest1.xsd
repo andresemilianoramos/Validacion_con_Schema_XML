@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Tipo_Genero">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="drama"/>
+      <xs:enumeration value="comedia"/>
+      <xs:enumeration value="fantasia"/>
+      <xs:enumeration value="documental"/>
+      <xs:enumeration value="historia"/>
+      <xs:enumeration value="guerra"/>
+      <xs:enumeration value="western"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="pelicula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="director" type="xs:string"/>
+        <xs:element name="genero" type="Tipo_Genero"/>
+        <xs:element name="reparto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="interprete" maxOccurs="unbounded" minOccurs="0" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="estreno" type="xs:string"/>
+      <xs:attribute name="minutos" type="xs:integer" use="optional" default="100"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

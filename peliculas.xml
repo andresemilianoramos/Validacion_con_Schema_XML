@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pelicula xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation ="pelicula_rest1.xsd"
+          estreno="1942" minutos="102">
+    <titulo>Casa Blanca</titulo>
+    <director>Michael Curtis</director>
+    <genero>drama</genero>
+    <reparto>
+        <interprete>Humphrey Bogart</interprete>
+        <interprete>Ingrid Bergman</interprete>
+        <interprete>Paul H</interprete>
+        <interprete>Conrad V</interprete>
+        <interprete>Claude R</interprete>
+        <interprete>Curt Bois</interprete>
+    </reparto>
+</pelicula>
