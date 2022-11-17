@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE agenda [
+<!ELEMENT agenda (situacion?, nombre_completo, apodo*, mail?)>
+        <!ELEMENT situacion (estudiante|trabajador)>
+        <!ELEMENT estudiante (#PCDATA)>
+        <!ELEMENT trabajador (#PCDATA)>
+        <!ELEMENT nombre_completo (nombre+, apellido1, apellido2)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido1 (#PCDATA)>
+        <!ELEMENT apellido2 (#PCDATA)>
+        <!ELEMENT apodo (#PCDATA)>
+        <!ELEMENT mail (#PCDATA)>
+]>
+<agenda>
+        <situacion>
+                <estudiante></estudiante>
+        </situacion>
+        <nombre_completo>
+                <nombre>Andres Emiliano</nombre>
+                <apellido1>Ramos</apellido1>
+                <apellido2>Gimenez</apellido2>
+        </nombre_completo>
+        <apodo>Andrus</apodo>
+        <mail>andresemiliano1@gmail.com</mail>
+</agenda>
