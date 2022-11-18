@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="registroTemp" type="registroTempType"/>
+
+  <xs:complexType name="incidenciaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+
+        <xs:attribute name="nombre" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="frio"/>
+              <xs:enumeration value="calor"/>
+              <xs:enumeration value="nieve"/>
+              <xs:enumeration value="lluvia"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+
+        <xs:attribute name="severidad" use="optional" default="BAJA">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="ALTA"/>
+              <xs:enumeration value="MEDIA"/>
+              <xs:enumeration value="BAJA"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:element name="temperaturaMinima" type="tempMin"/>
+  <xs:simpleType name="tempMin">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="temperaturaMaxima" type="tempMax"/>
+  <xs:simpleType name="tempMax">
+    <xs:restriction base="xs:integer">
+    <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="IncidenciasRelacionType">
+    <xs:sequence>
+      <xs:element type="incidenciaType" name="incidencia" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registroTempType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="provincia"/>
+
+      <xs:element type="xs:date" name="fechaRegistro"/>
+
+      <xs:element type="tempMin" name="temperaturaMinima"/>
+
+      <xs:element type="tempMax" name="temperaturaMaxima"/>
+
+      <xs:element type="IncidenciasRelacionType" name="IncidenciasRelacion"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/pelicula.iml" filepath="$PROJECT_DIR$/pelicula.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValidacionesSchema.iml" filepath="$PROJECT_DIR$/ValidacionesSchema.iml" />
     </modules>
   </component>
 </project>

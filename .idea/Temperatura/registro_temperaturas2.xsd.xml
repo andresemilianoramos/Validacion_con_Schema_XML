@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<registroTemp xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation ="registro_temp.xsd">
+  <provincia>string</provincia>
+  <fechaRegistro>2008-09-29</fechaRegistro>
+  <temperaturaMinima>100</temperaturaMinima>
+  <temperaturaMaxima>50</temperaturaMaxima>
+  <IncidenciasRelacion>
+    <!--Zero or more repetitions:-->
+    <incidencia nombre="calor" severidad="BAJA">string</incidencia>
+  </IncidenciasRelacion>
+</registroTemp>
