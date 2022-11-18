@@ -1,9 +1,0 @@
-<pelicula estreno="string" minutos="100">
-  <titulo>string</titulo>
-  <director>string</director>
-  <genero>historia</genero>
-  <reparto>
-    <!--Zero or more repetitions:-->
-    <interprete>string</interprete>
-  </reparto>
-</pelicula>
